@@ -102,3 +102,53 @@ output:
  Model Pavillion
  brand Apple
  Model IOS
+
+************************************************************************************************************************************************************
+
+2.Create your own resume data in JSON format
+let Resumeobj={"Name":"Gayathri M", 
+         "Course":"B.E ECE", 
+         "Batch":"2016-2020",
+         "Address":["213/63","sakthi nagar","madhapur road","kaniyur-641659"],
+         "Contact Number":9751468164,
+         "Gmail":"gayathri10061999@gmail.com",
+         "Techinical skills":["C","C++","Python","redshift","Javascript","HTML","CSS"],
+         "Experince":"Working in ivymobility in the role of software engineer in 1.8 month",
+         "Academic Profiles":["BE (Electronics and Communication Engineering) with 75% in Tamil Nadu Engineering College at Coimbatore, year of passing 2020.",
+          "HSC with 79% in N.S.V.V. Girls. Hr Sec School at Pattiveeranpatti, year of passing 2016.",
+          "SSLC with 90% inN.S.V.V. Girls. Hr Sec School at Pattiveeranpatti, year of passing2014."],
+          "Project Details":["Presented a project Student detail maintanence using java.",
+            "Presented a project Mobile charger without using transformer.",
+            "Presented a project DC Motor speed controlling using Aurduino Uno.",
+            "Presented a project Agriculture System Monitoring And Controlling Based on IOT DECLARATION"],
+         "Personal Details":{"Father's Name":"Murugan",
+                             "DOB":"10/06/1999",
+                             "Gender":"Female",
+                             "Nationality":"Indian",
+                             "Marial status":"Single",
+                             "Languages":"English,Tamil",
+                            },
+          "Hobbies":["Reading a novel","Gardening","Travelling"],
+          "Co-Curricular-Activities":["I did a course Advanced Diploma in Java Programming at CSC.",
+          "Attended workshop on EMBEDDED SYSTEM at TCE.",
+          "Attended workshop on ENTREPRENEURSHIP at TCE."],
+        };
+for(let key in Resumeobj){
+    console.log(key,Resumeobj[key]);
+};
+output:
+--------
+
+Name Gayathri M
+Course B.E ECE
+Batch 2016-2020
+Address (4) ['213/63', 'sakthi nagar', 'madhapur road', 'kaniyur-641659']
+Contact Number 9751468164
+Gmail gayathri10061999@gmail.com
+Techinical skills (7) ['C', 'C++', 'Python', 'redshift', 'Javascript', 'HTML', 'CSS']
+Experince Working in ivymobility in the role of software engineer in 1.8 month
+Academic Profiles (3) ['BE (Electronics and Communication Engineering) wit…ring College at Coimbatore, year of passing 2020.', 'HSC with 79% in N.S.V.V. Girls. Hr Sec School at Pattiveeranpatti, year of passing 2016.', 'SSLC with 90% inN.S.V.V. Girls. Hr Sec School at Pattiveeranpatti, year of passing2014.']
+Project Details (4) ['Presented a project Student detail maintanence using java.', 'Presented a project Mobile charger without using transformer.', 'Presented a project DC Motor speed controlling using Aurduino Uno.', 'Presented a project Agriculture System Monitoring And Controlling Based on IOT DECLARATION']
+Personal Details {Father's Name: 'Murugan', DOB: '10/06/1999', Gender: 'Female', Nationality: 'Indian', Marial status: 'Single', …}
+Hobbies (3) ['Reading a novel', 'Gardening', 'Travelling']
+Co-Curricular-Activities (3) ['I did a course Advanced Diploma in Java Programming at CSC.', 'Attended workshop on EMBEDDED SYSTEM at TCE.', 'Attended workshop on ENTREPRENEURSHIP at TCE.']
