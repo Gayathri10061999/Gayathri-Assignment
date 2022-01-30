@@ -285,3 +285,1025 @@ JavaScript.js:8 Flag:https://restcountries.eu/data/esh.svg
 JavaScript.js:8 Flag:https://restcountries.eu/data/yem.svg
 JavaScript.js:8 Flag:https://restcountries.eu/data/zmb.svg
 JavaScript.js:8 Flag:https://restcountries.eu/data/zwe.svg
+
+=============================================================================================================================================================
+
+3. Use the same rest countries and print all countries name, region, sub region and population
+solution:
+-----------
+var xhr=new XMLHttpRequest();
+xhr.open("GET","https://raw.githubusercontent.com/rvsp/restcountries-json-data/master/res-countries.json");
+xhr.send();
+xhr.onload=function(){
+  if(xhr.status>=200 && xhr.status<=300){
+let data=JSON.parse(this.response)
+for (let i=0;i<data.length;i++){
+console.log(`Contry Name:${data[i].name}
+            region:${data[i].region}
+            Sub Region:${data[i].subregion}
+            Population:${data[i].population}`)
+}
+}};
+
+output:
+----------
+Contry Name:Afghanistan
+            region:Asia
+            Sub Region:Southern Asia
+            Population:27657145
+JavaScript.js:8 Contry Name:Åland Islands
+            region:Europe
+            Sub Region:Northern Europe
+            Population:28875
+JavaScript.js:8 Contry Name:Albania
+            region:Europe
+            Sub Region:Southern Europe
+            Population:2886026
+JavaScript.js:8 Contry Name:Algeria
+            region:Africa
+            Sub Region:Northern Africa
+            Population:40400000
+JavaScript.js:8 Contry Name:American Samoa
+            region:Oceania
+            Sub Region:Polynesia
+            Population:57100
+JavaScript.js:8 Contry Name:Andorra
+            region:Europe
+            Sub Region:Southern Europe
+            Population:78014
+JavaScript.js:8 Contry Name:Angola
+            region:Africa
+            Sub Region:Middle Africa
+            Population:25868000
+JavaScript.js:8 Contry Name:Anguilla
+            region:Americas
+            Sub Region:Caribbean
+            Population:13452
+JavaScript.js:8 Contry Name:Antarctica
+            region:Polar
+            Sub Region:
+            Population:1000
+JavaScript.js:8 Contry Name:Antigua and Barbuda
+            region:Americas
+            Sub Region:Caribbean
+            Population:86295
+JavaScript.js:8 Contry Name:Argentina
+            region:Americas
+            Sub Region:South America
+            Population:43590400
+JavaScript.js:8 Contry Name:Armenia
+            region:Asia
+            Sub Region:Western Asia
+            Population:2994400
+JavaScript.js:8 Contry Name:Aruba
+            region:Americas
+            Sub Region:Caribbean
+            Population:107394
+JavaScript.js:8 Contry Name:Australia
+            region:Oceania
+            Sub Region:Australia and New Zealand
+            Population:24117360
+JavaScript.js:8 Contry Name:Austria
+            region:Europe
+            Sub Region:Western Europe
+            Population:8725931
+JavaScript.js:8 Contry Name:Azerbaijan
+            region:Asia
+            Sub Region:Western Asia
+            Population:9730500
+JavaScript.js:8 Contry Name:Bahamas
+            region:Americas
+            Sub Region:Caribbean
+            Population:378040
+JavaScript.js:8 Contry Name:Bahrain
+            region:Asia
+            Sub Region:Western Asia
+            Population:1404900
+JavaScript.js:8 Contry Name:Bangladesh
+            region:Asia
+            Sub Region:Southern Asia
+            Population:161006790
+JavaScript.js:8 Contry Name:Barbados
+            region:Americas
+            Sub Region:Caribbean
+            Population:285000
+JavaScript.js:8 Contry Name:Belarus
+            region:Europe
+            Sub Region:Eastern Europe
+            Population:9498700
+JavaScript.js:8 Contry Name:Belgium
+            region:Europe
+            Sub Region:Western Europe
+            Population:11319511
+JavaScript.js:8 Contry Name:Belize
+            region:Americas
+            Sub Region:Central America
+            Population:370300
+JavaScript.js:8 Contry Name:Benin
+            region:Africa
+            Sub Region:Western Africa
+            Population:10653654
+JavaScript.js:8 Contry Name:Bermuda
+            region:Americas
+            Sub Region:Northern America
+            Population:61954
+JavaScript.js:8 Contry Name:Bhutan
+            region:Asia
+            Sub Region:Southern Asia
+            Population:775620
+JavaScript.js:8 Contry Name:Bolivia (Plurinational State of)
+            region:Americas
+            Sub Region:South America
+            Population:10985059
+JavaScript.js:8 Contry Name:Bonaire, Sint Eustatius and Saba
+            region:Americas
+            Sub Region:Caribbean
+            Population:17408
+JavaScript.js:8 Contry Name:Bosnia and Herzegovina
+            region:Europe
+            Sub Region:Southern Europe
+            Population:3531159
+JavaScript.js:8 Contry Name:Botswana
+            region:Africa
+            Sub Region:Southern Africa
+            Population:2141206
+JavaScript.js:8 Contry Name:Bouvet Island
+            region:
+            Sub Region:
+            Population:0
+JavaScript.js:8 Contry Name:Brazil
+            region:Americas
+            Sub Region:South America
+            Population:206135893
+JavaScript.js:8 Contry Name:British Indian Ocean Territory
+            region:Africa
+            Sub Region:Eastern Africa
+            Population:3000
+JavaScript.js:8 Contry Name:United States Minor Outlying Islands
+            region:Americas
+            Sub Region:Northern America
+            Population:300
+JavaScript.js:8 Contry Name:Virgin Islands (British)
+            region:Americas
+            Sub Region:Caribbean
+            Population:28514
+JavaScript.js:8 Contry Name:Virgin Islands (U.S.)
+            region:Americas
+            Sub Region:Caribbean
+            Population:114743
+JavaScript.js:8 Contry Name:Brunei Darussalam
+            region:Asia
+            Sub Region:South-Eastern Asia
+            Population:411900
+JavaScript.js:8 Contry Name:Bulgaria
+            region:Europe
+            Sub Region:Eastern Europe
+            Population:7153784
+JavaScript.js:8 Contry Name:Burkina Faso
+            region:Africa
+            Sub Region:Western Africa
+            Population:19034397
+JavaScript.js:8 Contry Name:Burundi
+            region:Africa
+            Sub Region:Eastern Africa
+            Population:10114505
+JavaScript.js:8 Contry Name:Cambodia
+            region:Asia
+            Sub Region:South-Eastern Asia
+            Population:15626444
+JavaScript.js:8 Contry Name:Cameroon
+            region:Africa
+            Sub Region:Middle Africa
+            Population:22709892
+JavaScript.js:8 Contry Name:Canada
+            region:Americas
+            Sub Region:Northern America
+            Population:36155487
+JavaScript.js:8 Contry Name:Cabo Verde
+            region:Africa
+            Sub Region:Western Africa
+            Population:531239
+JavaScript.js:8 Contry Name:Cayman Islands
+            region:Americas
+            Sub Region:Caribbean
+            Population:58238
+JavaScript.js:8 Contry Name:Central African Republic
+            region:Africa
+            Sub Region:Middle Africa
+            Population:4998000
+JavaScript.js:8 Contry Name:Chad
+            region:Africa
+            Sub Region:Middle Africa
+            Population:14497000
+JavaScript.js:8 Contry Name:Chile
+            region:Americas
+            Sub Region:South America
+            Population:18191900
+JavaScript.js:8 Contry Name:China
+            region:Asia
+            Sub Region:Eastern Asia
+            Population:1377422166
+JavaScript.js:8 Contry Name:Christmas Island
+            region:Oceania
+            Sub Region:Australia and New Zealand
+            Population:2072
+JavaScript.js:8 Contry Name:Cocos (Keeling) Islands
+            region:Oceania
+            Sub Region:Australia and New Zealand
+            Population:550
+JavaScript.js:8 Contry Name:Colombia
+            region:Americas
+            Sub Region:South America
+            Population:48759958
+JavaScript.js:8 Contry Name:Comoros
+            region:Africa
+            Sub Region:Eastern Africa
+            Population:806153
+JavaScript.js:8 Contry Name:Congo
+            region:Africa
+            Sub Region:Middle Africa
+            Population:4741000
+JavaScript.js:8 Contry Name:Congo (Democratic Republic of the)
+            region:Africa
+            Sub Region:Middle Africa
+            Population:85026000
+JavaScript.js:8 Contry Name:Cook Islands
+            region:Oceania
+            Sub Region:Polynesia
+            Population:18100
+JavaScript.js:8 Contry Name:Costa Rica
+            region:Americas
+            Sub Region:Central America
+            Population:4890379
+JavaScript.js:8 Contry Name:Croatia
+            region:Europe
+            Sub Region:Southern Europe
+            Population:4190669
+JavaScript.js:8 Contry Name:Cuba
+            region:Americas
+            Sub Region:Caribbean
+            Population:11239004
+JavaScript.js:8 Contry Name:Curaçao
+            region:Americas
+            Sub Region:Caribbean
+            Population:154843
+JavaScript.js:8 Contry Name:Cyprus
+            region:Europe
+            Sub Region:Southern Europe
+            Population:847000
+JavaScript.js:8 Contry Name:Czech Republic
+            region:Europe
+            Sub Region:Eastern Europe
+            Population:10558524
+JavaScript.js:8 Contry Name:Denmark
+            region:Europe
+            Sub Region:Northern Europe
+            Population:5717014
+JavaScript.js:8 Contry Name:Djibouti
+            region:Africa
+            Sub Region:Eastern Africa
+            Population:900000
+JavaScript.js:8 Contry Name:Dominica
+            region:Americas
+            Sub Region:Caribbean
+            Population:71293
+JavaScript.js:8 Contry Name:Dominican Republic
+            region:Americas
+            Sub Region:Caribbean
+            Population:10075045
+JavaScript.js:8 Contry Name:Ecuador
+            region:Americas
+            Sub Region:South America
+            Population:16545799
+JavaScript.js:8 Contry Name:Egypt
+            region:Africa
+            Sub Region:Northern Africa
+            Population:91290000
+JavaScript.js:8 Contry Name:El Salvador
+            region:Americas
+            Sub Region:Central America
+            Population:6520675
+JavaScript.js:8 Contry Name:Equatorial Guinea
+            region:Africa
+            Sub Region:Middle Africa
+            Population:1222442
+JavaScript.js:8 Contry Name:Eritrea
+            region:Africa
+            Sub Region:Eastern Africa
+            Population:5352000
+JavaScript.js:8 Contry Name:Estonia
+            region:Europe
+            Sub Region:Northern Europe
+            Population:1315944
+JavaScript.js:8 Contry Name:Ethiopia
+            region:Africa
+            Sub Region:Eastern Africa
+            Population:92206005
+JavaScript.js:8 Contry Name:Falkland Islands (Malvinas)
+            region:Americas
+            Sub Region:South America
+            Population:2563
+JavaScript.js:8 Contry Name:Faroe Islands
+            region:Europe
+            Sub Region:Northern Europe
+            Population:49376
+JavaScript.js:8 Contry Name:Fiji
+            region:Oceania
+            Sub Region:Melanesia
+            Population:867000
+JavaScript.js:8 Contry Name:Finland
+            region:Europe
+            Sub Region:Northern Europe
+            Population:5491817
+JavaScript.js:8 Contry Name:France
+            region:Europe
+            Sub Region:Western Europe
+            Population:66710000
+JavaScript.js:8 Contry Name:French Guiana
+            region:Americas
+            Sub Region:South America
+            Population:254541
+JavaScript.js:8 Contry Name:French Polynesia
+            region:Oceania
+            Sub Region:Polynesia
+            Population:271800
+JavaScript.js:8 Contry Name:French Southern Territories
+            region:Africa
+            Sub Region:Southern Africa
+            Population:140
+JavaScript.js:8 Contry Name:Gabon
+            region:Africa
+            Sub Region:Middle Africa
+            Population:1802278
+JavaScript.js:8 Contry Name:Gambia
+            region:Africa
+            Sub Region:Western Africa
+            Population:1882450
+JavaScript.js:8 Contry Name:Georgia
+            region:Asia
+            Sub Region:Western Asia
+            Population:3720400
+JavaScript.js:8 Contry Name:Germany
+            region:Europe
+            Sub Region:Western Europe
+            Population:81770900
+JavaScript.js:8 Contry Name:Ghana
+            region:Africa
+            Sub Region:Western Africa
+            Population:27670174
+JavaScript.js:8 Contry Name:Gibraltar
+            region:Europe
+            Sub Region:Southern Europe
+            Population:33140
+JavaScript.js:8 Contry Name:Greece
+            region:Europe
+            Sub Region:Southern Europe
+            Population:10858018
+JavaScript.js:8 Contry Name:Greenland
+            region:Americas
+            Sub Region:Northern America
+            Population:55847
+JavaScript.js:8 Contry Name:Grenada
+            region:Americas
+            Sub Region:Caribbean
+            Population:103328
+JavaScript.js:8 Contry Name:Guadeloupe
+            region:Americas
+            Sub Region:Caribbean
+            Population:400132
+JavaScript.js:8 Contry Name:Guam
+            region:Oceania
+            Sub Region:Micronesia
+            Population:184200
+JavaScript.js:8 Contry Name:Guatemala
+            region:Americas
+            Sub Region:Central America
+            Population:16176133
+JavaScript.js:8 Contry Name:Guernsey
+            region:Europe
+            Sub Region:Northern Europe
+            Population:62999
+JavaScript.js:8 Contry Name:Guinea
+            region:Africa
+            Sub Region:Western Africa
+            Population:12947000
+JavaScript.js:8 Contry Name:Guinea-Bissau
+            region:Africa
+            Sub Region:Western Africa
+            Population:1547777
+JavaScript.js:8 Contry Name:Guyana
+            region:Americas
+            Sub Region:South America
+            Population:746900
+JavaScript.js:8 Contry Name:Haiti
+            region:Americas
+            Sub Region:Caribbean
+            Population:11078033
+JavaScript.js:8 Contry Name:Heard Island and McDonald Islands
+            region:
+            Sub Region:
+            Population:0
+JavaScript.js:8 Contry Name:Holy See
+            region:Europe
+            Sub Region:Southern Europe
+            Population:451
+JavaScript.js:8 Contry Name:Honduras
+            region:Americas
+            Sub Region:Central America
+            Population:8576532
+JavaScript.js:8 Contry Name:Hong Kong
+            region:Asia
+            Sub Region:Eastern Asia
+            Population:7324300
+JavaScript.js:8 Contry Name:Hungary
+            region:Europe
+            Sub Region:Eastern Europe
+            Population:9823000
+JavaScript.js:8 Contry Name:Iceland
+            region:Europe
+            Sub Region:Northern Europe
+            Population:334300
+JavaScript.js:8 Contry Name:India
+            region:Asia
+            Sub Region:Southern Asia
+            Population:1295210000
+JavaScript.js:8 Contry Name:Indonesia
+            region:Asia
+            Sub Region:South-Eastern Asia
+            Population:258705000
+JavaScript.js:8 Contry Name:Côte d'Ivoire
+            region:Africa
+            Sub Region:Western Africa
+            Population:22671331
+JavaScript.js:8 Contry Name:Iran (Islamic Republic of)
+            region:Asia
+            Sub Region:Southern Asia
+            Population:79369900
+JavaScript.js:8 Contry Name:Iraq
+            region:Asia
+            Sub Region:Western Asia
+            Population:37883543
+JavaScript.js:8 Contry Name:Ireland
+            region:Europe
+            Sub Region:Northern Europe
+            Population:6378000
+JavaScript.js:8 Contry Name:Isle of Man
+            region:Europe
+            Sub Region:Northern Europe
+            Population:84497
+JavaScript.js:8 Contry Name:Israel
+            region:Asia
+            Sub Region:Western Asia
+            Population:8527400
+JavaScript.js:8 Contry Name:Italy
+            region:Europe
+            Sub Region:Southern Europe
+            Population:60665551
+JavaScript.js:8 Contry Name:Jamaica
+            region:Americas
+            Sub Region:Caribbean
+            Population:2723246
+JavaScript.js:8 Contry Name:Japan
+            region:Asia
+            Sub Region:Eastern Asia
+            Population:126960000
+JavaScript.js:8 Contry Name:Jersey
+            region:Europe
+            Sub Region:Northern Europe
+            Population:100800
+JavaScript.js:8 Contry Name:Jordan
+            region:Asia
+            Sub Region:Western Asia
+            Population:9531712
+JavaScript.js:8 Contry Name:Kazakhstan
+            region:Asia
+            Sub Region:Central Asia
+            Population:17753200
+JavaScript.js:8 Contry Name:Kenya
+            region:Africa
+            Sub Region:Eastern Africa
+            Population:47251000
+JavaScript.js:8 Contry Name:Kiribati
+            region:Oceania
+            Sub Region:Micronesia
+            Population:113400
+JavaScript.js:8 Contry Name:Kuwait
+            region:Asia
+            Sub Region:Western Asia
+            Population:4183658
+JavaScript.js:8 Contry Name:Kyrgyzstan
+            region:Asia
+            Sub Region:Central Asia
+            Population:6047800
+JavaScript.js:8 Contry Name:Lao People's Democratic Republic
+            region:Asia
+            Sub Region:South-Eastern Asia
+            Population:6492400
+JavaScript.js:8 Contry Name:Latvia
+            region:Europe
+            Sub Region:Northern Europe
+            Population:1961600
+JavaScript.js:8 Contry Name:Lebanon
+            region:Asia
+            Sub Region:Western Asia
+            Population:5988000
+JavaScript.js:8 Contry Name:Lesotho
+            region:Africa
+            Sub Region:Southern Africa
+            Population:1894194
+JavaScript.js:8 Contry Name:Liberia
+            region:Africa
+            Sub Region:Western Africa
+            Population:4615000
+JavaScript.js:8 Contry Name:Libya
+            region:Africa
+            Sub Region:Northern Africa
+            Population:6385000
+JavaScript.js:8 Contry Name:Liechtenstein
+            region:Europe
+            Sub Region:Western Europe
+            Population:37623
+JavaScript.js:8 Contry Name:Lithuania
+            region:Europe
+            Sub Region:Northern Europe
+            Population:2872294
+JavaScript.js:8 Contry Name:Luxembourg
+            region:Europe
+            Sub Region:Western Europe
+            Population:576200
+JavaScript.js:8 Contry Name:Macao
+            region:Asia
+            Sub Region:Eastern Asia
+            Population:649100
+JavaScript.js:8 Contry Name:Macedonia (the former Yugoslav Republic of)
+            region:Europe
+            Sub Region:Southern Europe
+            Population:2058539
+JavaScript.js:8 Contry Name:Madagascar
+            region:Africa
+            Sub Region:Eastern Africa
+            Population:22434363
+JavaScript.js:8 Contry Name:Malawi
+            region:Africa
+            Sub Region:Eastern Africa
+            Population:16832910
+JavaScript.js:8 Contry Name:Malaysia
+            region:Asia
+            Sub Region:South-Eastern Asia
+            Population:31405416
+JavaScript.js:8 Contry Name:Maldives
+            region:Asia
+            Sub Region:Southern Asia
+            Population:344023
+JavaScript.js:8 Contry Name:Mali
+            region:Africa
+            Sub Region:Western Africa
+            Population:18135000
+JavaScript.js:8 Contry Name:Malta
+            region:Europe
+            Sub Region:Southern Europe
+            Population:425384
+JavaScript.js:8 Contry Name:Marshall Islands
+            region:Oceania
+            Sub Region:Micronesia
+            Population:54880
+JavaScript.js:8 Contry Name:Martinique
+            region:Americas
+            Sub Region:Caribbean
+            Population:378243
+JavaScript.js:8 Contry Name:Mauritania
+            region:Africa
+            Sub Region:Western Africa
+            Population:3718678
+JavaScript.js:8 Contry Name:Mauritius
+            region:Africa
+            Sub Region:Eastern Africa
+            Population:1262879
+JavaScript.js:8 Contry Name:Mayotte
+            region:Africa
+            Sub Region:Eastern Africa
+            Population:226915
+JavaScript.js:8 Contry Name:Mexico
+            region:Americas
+            Sub Region:Central America
+            Population:122273473
+JavaScript.js:8 Contry Name:Micronesia (Federated States of)
+            region:Oceania
+            Sub Region:Micronesia
+            Population:102800
+JavaScript.js:8 Contry Name:Moldova (Republic of)
+            region:Europe
+            Sub Region:Eastern Europe
+            Population:3553100
+JavaScript.js:8 Contry Name:Monaco
+            region:Europe
+            Sub Region:Western Europe
+            Population:38400
+JavaScript.js:8 Contry Name:Mongolia
+            region:Asia
+            Sub Region:Eastern Asia
+            Population:3093100
+JavaScript.js:8 Contry Name:Montenegro
+            region:Europe
+            Sub Region:Southern Europe
+            Population:621810
+JavaScript.js:8 Contry Name:Montserrat
+            region:Americas
+            Sub Region:Caribbean
+            Population:4922
+JavaScript.js:8 Contry Name:Morocco
+            region:Africa
+            Sub Region:Northern Africa
+            Population:33337529
+JavaScript.js:8 Contry Name:Mozambique
+            region:Africa
+            Sub Region:Eastern Africa
+            Population:26423700
+JavaScript.js:8 Contry Name:Myanmar
+            region:Asia
+            Sub Region:South-Eastern Asia
+            Population:51419420
+JavaScript.js:8 Contry Name:Namibia
+            region:Africa
+            Sub Region:Southern Africa
+            Population:2324388
+JavaScript.js:8 Contry Name:Nauru
+            region:Oceania
+            Sub Region:Micronesia
+            Population:10084
+JavaScript.js:8 Contry Name:Nepal
+            region:Asia
+            Sub Region:Southern Asia
+            Population:28431500
+JavaScript.js:8 Contry Name:Netherlands
+            region:Europe
+            Sub Region:Western Europe
+            Population:17019800
+JavaScript.js:8 Contry Name:New Caledonia
+            region:Oceania
+            Sub Region:Melanesia
+            Population:268767
+JavaScript.js:8 Contry Name:New Zealand
+            region:Oceania
+            Sub Region:Australia and New Zealand
+            Population:4697854
+JavaScript.js:8 Contry Name:Nicaragua
+            region:Americas
+            Sub Region:Central America
+            Population:6262703
+JavaScript.js:8 Contry Name:Niger
+            region:Africa
+            Sub Region:Western Africa
+            Population:20715000
+JavaScript.js:8 Contry Name:Nigeria
+            region:Africa
+            Sub Region:Western Africa
+            Population:186988000
+JavaScript.js:8 Contry Name:Niue
+            region:Oceania
+            Sub Region:Polynesia
+            Population:1470
+JavaScript.js:8 Contry Name:Norfolk Island
+            region:Oceania
+            Sub Region:Australia and New Zealand
+            Population:2302
+JavaScript.js:8 Contry Name:Korea (Democratic People's Republic of)
+            region:Asia
+            Sub Region:Eastern Asia
+            Population:25281000
+JavaScript.js:8 Contry Name:Northern Mariana Islands
+            region:Oceania
+            Sub Region:Micronesia
+            Population:56940
+JavaScript.js:8 Contry Name:Norway
+            region:Europe
+            Sub Region:Northern Europe
+            Population:5223256
+JavaScript.js:8 Contry Name:Oman
+            region:Asia
+            Sub Region:Western Asia
+            Population:4420133
+JavaScript.js:8 Contry Name:Pakistan
+            region:Asia
+            Sub Region:Southern Asia
+            Population:194125062
+JavaScript.js:8 Contry Name:Palau
+            region:Oceania
+            Sub Region:Micronesia
+            Population:17950
+JavaScript.js:8 Contry Name:Palestine, State of
+            region:Asia
+            Sub Region:Western Asia
+            Population:4682467
+JavaScript.js:8 Contry Name:Panama
+            region:Americas
+            Sub Region:Central America
+            Population:3814672
+JavaScript.js:8 Contry Name:Papua New Guinea
+            region:Oceania
+            Sub Region:Melanesia
+            Population:8083700
+JavaScript.js:8 Contry Name:Paraguay
+            region:Americas
+            Sub Region:South America
+            Population:6854536
+JavaScript.js:8 Contry Name:Peru
+            region:Americas
+            Sub Region:South America
+            Population:31488700
+JavaScript.js:8 Contry Name:Philippines
+            region:Asia
+            Sub Region:South-Eastern Asia
+            Population:103279800
+JavaScript.js:8 Contry Name:Pitcairn
+            region:Oceania
+            Sub Region:Polynesia
+            Population:56
+JavaScript.js:8 Contry Name:Poland
+            region:Europe
+            Sub Region:Eastern Europe
+            Population:38437239
+JavaScript.js:8 Contry Name:Portugal
+            region:Europe
+            Sub Region:Southern Europe
+            Population:10374822
+JavaScript.js:8 Contry Name:Puerto Rico
+            region:Americas
+            Sub Region:Caribbean
+            Population:3474182
+JavaScript.js:8 Contry Name:Qatar
+            region:Asia
+            Sub Region:Western Asia
+            Population:2587564
+JavaScript.js:8 Contry Name:Republic of Kosovo
+            region:Europe
+            Sub Region:Eastern Europe
+            Population:1733842
+JavaScript.js:8 Contry Name:Réunion
+            region:Africa
+            Sub Region:Eastern Africa
+            Population:840974
+JavaScript.js:8 Contry Name:Romania
+            region:Europe
+            Sub Region:Eastern Europe
+            Population:19861408
+JavaScript.js:8 Contry Name:Russian Federation
+            region:Europe
+            Sub Region:Eastern Europe
+            Population:146599183
+JavaScript.js:8 Contry Name:Rwanda
+            region:Africa
+            Sub Region:Eastern Africa
+            Population:11553188
+JavaScript.js:8 Contry Name:Saint Barthélemy
+            region:Americas
+            Sub Region:Caribbean
+            Population:9417
+JavaScript.js:8 Contry Name:Saint Helena, Ascension and Tristan da Cunha
+            region:Africa
+            Sub Region:Western Africa
+            Population:4255
+JavaScript.js:8 Contry Name:Saint Kitts and Nevis
+            region:Americas
+            Sub Region:Caribbean
+            Population:46204
+JavaScript.js:8 Contry Name:Saint Lucia
+            region:Americas
+            Sub Region:Caribbean
+            Population:186000
+JavaScript.js:8 Contry Name:Saint Martin (French part)
+            region:Americas
+            Sub Region:Caribbean
+            Population:36979
+JavaScript.js:8 Contry Name:Saint Pierre and Miquelon
+            region:Americas
+            Sub Region:Northern America
+            Population:6069
+JavaScript.js:8 Contry Name:Saint Vincent and the Grenadines
+            region:Americas
+            Sub Region:Caribbean
+            Population:109991
+JavaScript.js:8 Contry Name:Samoa
+            region:Oceania
+            Sub Region:Polynesia
+            Population:194899
+JavaScript.js:8 Contry Name:San Marino
+            region:Europe
+            Sub Region:Southern Europe
+            Population:33005
+JavaScript.js:8 Contry Name:Sao Tome and Principe
+            region:Africa
+            Sub Region:Middle Africa
+            Population:187356
+JavaScript.js:8 Contry Name:Saudi Arabia
+            region:Asia
+            Sub Region:Western Asia
+            Population:32248200
+JavaScript.js:8 Contry Name:Senegal
+            region:Africa
+            Sub Region:Western Africa
+            Population:14799859
+JavaScript.js:8 Contry Name:Serbia
+            region:Europe
+            Sub Region:Southern Europe
+            Population:7076372
+JavaScript.js:8 Contry Name:Seychelles
+            region:Africa
+            Sub Region:Eastern Africa
+            Population:91400
+JavaScript.js:8 Contry Name:Sierra Leone
+            region:Africa
+            Sub Region:Western Africa
+            Population:7075641
+JavaScript.js:8 Contry Name:Singapore
+            region:Asia
+            Sub Region:South-Eastern Asia
+            Population:5535000
+JavaScript.js:8 Contry Name:Sint Maarten (Dutch part)
+            region:Americas
+            Sub Region:Caribbean
+            Population:38247
+JavaScript.js:8 Contry Name:Slovakia
+            region:Europe
+            Sub Region:Eastern Europe
+            Population:5426252
+JavaScript.js:8 Contry Name:Slovenia
+            region:Europe
+            Sub Region:Southern Europe
+            Population:2064188
+JavaScript.js:8 Contry Name:Solomon Islands
+            region:Oceania
+            Sub Region:Melanesia
+            Population:642000
+JavaScript.js:8 Contry Name:Somalia
+            region:Africa
+            Sub Region:Eastern Africa
+            Population:11079000
+JavaScript.js:8 Contry Name:South Africa
+            region:Africa
+            Sub Region:Southern Africa
+            Population:55653654
+JavaScript.js:8 Contry Name:South Georgia and the South Sandwich Islands
+            region:Americas
+            Sub Region:South America
+            Population:30
+JavaScript.js:8 Contry Name:Korea (Republic of)
+            region:Asia
+            Sub Region:Eastern Asia
+            Population:50801405
+JavaScript.js:8 Contry Name:South Sudan
+            region:Africa
+            Sub Region:Middle Africa
+            Population:12131000
+JavaScript.js:8 Contry Name:Spain
+            region:Europe
+            Sub Region:Southern Europe
+            Population:46438422
+JavaScript.js:8 Contry Name:Sri Lanka
+            region:Asia
+            Sub Region:Southern Asia
+            Population:20966000
+JavaScript.js:8 Contry Name:Sudan
+            region:Africa
+            Sub Region:Northern Africa
+            Population:39598700
+JavaScript.js:8 Contry Name:Suriname
+            region:Americas
+            Sub Region:South America
+            Population:541638
+JavaScript.js:8 Contry Name:Svalbard and Jan Mayen
+            region:Europe
+            Sub Region:Northern Europe
+            Population:2562
+JavaScript.js:8 Contry Name:Swaziland
+            region:Africa
+            Sub Region:Southern Africa
+            Population:1132657
+JavaScript.js:8 Contry Name:Sweden
+            region:Europe
+            Sub Region:Northern Europe
+            Population:9894888
+JavaScript.js:8 Contry Name:Switzerland
+            region:Europe
+            Sub Region:Western Europe
+            Population:8341600
+JavaScript.js:8 Contry Name:Syrian Arab Republic
+            region:Asia
+            Sub Region:Western Asia
+            Population:18564000
+JavaScript.js:8 Contry Name:Taiwan
+            region:Asia
+            Sub Region:Eastern Asia
+            Population:23503349
+JavaScript.js:8 Contry Name:Tajikistan
+            region:Asia
+            Sub Region:Central Asia
+            Population:8593600
+JavaScript.js:8 Contry Name:Tanzania, United Republic of
+            region:Africa
+            Sub Region:Eastern Africa
+            Population:55155000
+JavaScript.js:8 Contry Name:Thailand
+            region:Asia
+            Sub Region:South-Eastern Asia
+            Population:65327652
+JavaScript.js:8 Contry Name:Timor-Leste
+            region:Asia
+            Sub Region:South-Eastern Asia
+            Population:1167242
+JavaScript.js:8 Contry Name:Togo
+            region:Africa
+            Sub Region:Western Africa
+            Population:7143000
+JavaScript.js:8 Contry Name:Tokelau
+            region:Oceania
+            Sub Region:Polynesia
+            Population:1411
+JavaScript.js:8 Contry Name:Tonga
+            region:Oceania
+            Sub Region:Polynesia
+            Population:103252
+JavaScript.js:8 Contry Name:Trinidad and Tobago
+            region:Americas
+            Sub Region:Caribbean
+            Population:1349667
+JavaScript.js:8 Contry Name:Tunisia
+            region:Africa
+            Sub Region:Northern Africa
+            Population:11154400
+JavaScript.js:8 Contry Name:Turkey
+            region:Asia
+            Sub Region:Western Asia
+            Population:78741053
+JavaScript.js:8 Contry Name:Turkmenistan
+            region:Asia
+            Sub Region:Central Asia
+            Population:4751120
+JavaScript.js:8 Contry Name:Turks and Caicos Islands
+            region:Americas
+            Sub Region:Caribbean
+            Population:31458
+JavaScript.js:8 Contry Name:Tuvalu
+            region:Oceania
+            Sub Region:Polynesia
+            Population:10640
+JavaScript.js:8 Contry Name:Uganda
+            region:Africa
+            Sub Region:Eastern Africa
+            Population:33860700
+JavaScript.js:8 Contry Name:Ukraine
+            region:Europe
+            Sub Region:Eastern Europe
+            Population:42692393
+JavaScript.js:8 Contry Name:United Arab Emirates
+            region:Asia
+            Sub Region:Western Asia
+            Population:9856000
+JavaScript.js:8 Contry Name:United Kingdom of Great Britain and Northern Ireland
+            region:Europe
+            Sub Region:Northern Europe
+            Population:65110000
+JavaScript.js:8 Contry Name:United States of America
+            region:Americas
+            Sub Region:Northern America
+            Population:323947000
+JavaScript.js:8 Contry Name:Uruguay
+            region:Americas
+            Sub Region:South America
+            Population:3480222
+JavaScript.js:8 Contry Name:Uzbekistan
+            region:Asia
+            Sub Region:Central Asia
+            Population:31576400
+JavaScript.js:8 Contry Name:Vanuatu
+            region:Oceania
+            Sub Region:Melanesia
+            Population:277500
+JavaScript.js:8 Contry Name:Venezuela (Bolivarian Republic of)
+            region:Americas
+            Sub Region:South America
+            Population:31028700
+JavaScript.js:8 Contry Name:Viet Nam
+            region:Asia
+            Sub Region:South-Eastern Asia
+            Population:92700000
+JavaScript.js:8 Contry Name:Wallis and Futuna
+            region:Oceania
+            Sub Region:Polynesia
+            Population:11750
+JavaScript.js:8 Contry Name:Western Sahara
+            region:Africa
+            Sub Region:Northern Africa
+            Population:510713
+JavaScript.js:8 Contry Name:Yemen
+            region:Asia
+            Sub Region:Western Asia
+            Population:27478000
+JavaScript.js:8 Contry Name:Zambia
+            region:Africa
+            Sub Region:Eastern Africa
+            Population:15933883
+JavaScript.js:8 Contry Name:Zimbabwe
+            region:Africa
+            Sub Region:Eastern Africa
+            Population:14240168
