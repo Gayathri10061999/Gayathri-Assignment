@@ -1,0 +1,287 @@
+1. How to compare two JSON have the same properties without order?
+var obj1 = { name: "Person 1", age:5 };
+var obj2 = { age:5, name: "Person 1" };
+solution:  
+--------------
+
+    var isEqualsJson = (obj1,obj2)=>{
+    keys1 = Object.keys(obj1);
+    keys2 = Object.keys(obj2);
+  
+    
+    return keys1.length === keys2.length && Object.keys(obj1).every(key=>obj1[key]==obj2[key]);
+  }
+  var obj1 = { name: "Person 1", age:5 };
+  var obj2 = { age:5, name: "Person 1" };
+  
+  console.log("json data is "+ isEqualsJson(obj1,obj2))
+  
+output:
+----------
+json data is true
+
+==========================================================================================================================================================
+2. Use the rest countries API url -> https://restcountries.eu/rest/v2/all and display all the country flags in console
+var xhr=new XMLHttpRequest();
+xhr.open("GET","https://raw.githubusercontent.com/rvsp/restcountries-json-data/master/res-countries.json");
+xhr.send();
+xhr.onload=function(){
+  if(xhr.status>=200 && xhr.status<=300){
+let data=JSON.parse(this.response)
+for (let i=0;i<data.length;i++){
+console.log(`Flag:${data[i].flag}`)
+}
+}};
+
+output:
+----------
+Flag:https://restcountries.eu/data/afg.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/ala.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/alb.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/dza.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/asm.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/and.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/ago.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/aia.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/ata.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/atg.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/arg.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/arm.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/abw.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/aus.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/aut.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/aze.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/bhs.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/bhr.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/bgd.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/brb.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/blr.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/bel.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/blz.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/ben.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/bmu.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/btn.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/bol.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/bes.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/bih.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/bwa.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/bvt.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/bra.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/iot.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/umi.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/vgb.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/vir.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/brn.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/bgr.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/bfa.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/bdi.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/khm.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/cmr.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/can.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/cpv.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/cym.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/caf.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/tcd.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/chl.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/chn.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/cxr.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/cck.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/col.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/com.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/cog.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/cod.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/cok.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/cri.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/hrv.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/cub.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/cuw.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/cyp.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/cze.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/dnk.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/dji.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/dma.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/dom.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/ecu.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/egy.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/slv.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/gnq.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/eri.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/est.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/eth.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/flk.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/fro.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/fji.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/fin.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/fra.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/guf.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/pyf.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/atf.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/gab.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/gmb.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/geo.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/deu.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/gha.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/gib.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/grc.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/grl.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/grd.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/glp.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/gum.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/gtm.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/ggy.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/gin.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/gnb.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/guy.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/hti.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/hmd.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/vat.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/hnd.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/hkg.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/hun.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/isl.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/ind.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/idn.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/civ.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/irn.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/irq.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/irl.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/imn.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/isr.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/ita.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/jam.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/jpn.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/jey.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/jor.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/kaz.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/ken.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/kir.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/kwt.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/kgz.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/lao.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/lva.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/lbn.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/lso.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/lbr.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/lby.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/lie.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/ltu.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/lux.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/mac.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/mkd.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/mdg.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/mwi.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/mys.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/mdv.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/mli.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/mlt.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/mhl.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/mtq.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/mrt.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/mus.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/myt.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/mex.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/fsm.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/mda.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/mco.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/mng.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/mne.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/msr.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/mar.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/moz.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/mmr.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/nam.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/nru.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/npl.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/nld.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/ncl.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/nzl.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/nic.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/ner.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/nga.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/niu.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/nfk.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/prk.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/mnp.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/nor.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/omn.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/pak.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/plw.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/pse.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/pan.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/png.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/pry.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/per.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/phl.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/pcn.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/pol.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/prt.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/pri.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/qat.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/kos.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/reu.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/rou.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/rus.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/rwa.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/blm.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/shn.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/kna.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/lca.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/maf.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/spm.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/vct.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/wsm.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/smr.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/stp.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/sau.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/sen.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/srb.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/syc.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/sle.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/sgp.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/sxm.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/svk.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/svn.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/slb.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/som.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/zaf.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/sgs.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/kor.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/ssd.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/esp.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/lka.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/sdn.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/sur.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/sjm.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/swz.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/swe.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/che.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/syr.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/twn.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/tjk.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/tza.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/tha.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/tls.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/tgo.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/tkl.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/ton.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/tto.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/tun.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/tur.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/tkm.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/tca.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/tuv.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/uga.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/ukr.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/are.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/gbr.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/usa.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/ury.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/uzb.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/vut.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/ven.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/vnm.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/wlf.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/esh.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/yem.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/zmb.svg
+JavaScript.js:8 Flag:https://restcountries.eu/data/zwe.svg
